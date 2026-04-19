@@ -49,7 +49,7 @@ async fn main() {
         .await
         .expect("Failed to bind to port 3001");
 
-    println!("🚀 Server running on http://127.0.0.1:3001");
+    println!(" Server running on http://127.0.0.1:3001");
 
     // Start the server
     axum::serve(listener, app)
