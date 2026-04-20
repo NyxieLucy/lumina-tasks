@@ -45,11 +45,11 @@ async fn main() {
         .layer(ServiceBuilder::new().layer(cors));
 
     // Create TCP listener on localhost:3000
-    let listener = TcpListener::bind("127.0.0.1:3001")
+    let listener = TcpListener::bind("0.0.0.0:3001")
         .await
         .expect("Failed to bind to port 3001");
 
-    println!(" Server running on http://127.0.0.1:3001");
+    println!(" Server running on http://0.0.0.0:3001");
 
     // Start the server
     axum::serve(listener, app)
